@@ -346,6 +346,7 @@
 			);
 			name = xzViewController.xib;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		2AC438F215B6970D00233CBC /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;

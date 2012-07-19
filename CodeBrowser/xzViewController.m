@@ -25,6 +25,13 @@
     [self.view addSubview:self.menuController.view];
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    if(toInterfaceOrientation == UIDeviceOrientationPortrait || toInterfaceOrientation == UIDeviceOrientationPortraitUpsideDown) {
+        return NO;
+    }
+    return YES;
+}
+
 - (xzMenuViewController *)menuController {
     if(!menuController) {
         menuController = [[xzMenuViewController alloc] initWithRootPath:@"/Users/wangxizhu/Desktop"];

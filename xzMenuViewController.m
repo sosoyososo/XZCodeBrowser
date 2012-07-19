@@ -35,6 +35,10 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    return YES;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [menuHelper numOfMenuCell];
 }
