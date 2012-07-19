@@ -7,28 +7,31 @@
 //
 
 #import "xzViewController.h"
+#import "xzMenuViewController.h"
 
-@interface xzViewController ()
+@interface  xzViewController()
+
+@property (nonatomic, readonly) xzMenuViewController            *menuController;
 
 @end
 
 @implementation xzViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+@synthesize menuController;
+
+- (void)loadView {
+    [super loadView];
+    [self addChildViewController:self.menuController];
+    [self.view addSubview:self.menuController.view];
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+- (xzMenuViewController *)menuController {
+    if(!menuController) {
+        menuController = [[xzMenuViewController alloc] initWithRootPath:@"/Users/wangxizhu/Desktop"];
+        menuController.view.frame = self.view.bounds;
+    }
+    return menuController;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
-}
 
 @end

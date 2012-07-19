@@ -20,6 +20,12 @@
 		2AC438EC15B6970D00233CBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC438CD15B6970D00233CBC /* Foundation.framework */; };
 		2AC438F415B6970D00233CBC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AC438F215B6970D00233CBC /* InfoPlist.strings */; };
 		2AC438F715B6970D00233CBC /* CodeBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC438F615B6970D00233CBC /* CodeBrowserTests.m */; };
+		2AC4390315B6974300233CBC /* xzMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC4390215B6974300233CBC /* xzMenuViewController.m */; };
+		2AD33AF615B6A5FF0027D30F /* xzMenuHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD33AF515B6A5FF0027D30F /* xzMenuHelper.m */; };
+		2AD33AFB15B7A4F90027D30F /* xzMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD33AFA15B7A4F90027D30F /* xzMenuItemView.m */; };
+		2AD33B0515B7AD220027D30F /* xzMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD33B0415B7AD220027D30F /* xzMenuCell.m */; };
+		2AD33B0C15B7B2810027D30F /* dictionaryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD33B0A15B7B2810027D30F /* dictionaryIcon.png */; };
+		2AD33B0D15B7B2810027D30F /* fileIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD33B0B15B7B2810027D30F /* fileIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,21 +43,31 @@
 		2AC438CB15B6970D00233CBC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2AC438CD15B6970D00233CBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2AC438CF15B6970D00233CBC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2AC438D315B6970D00233CBC /* CodeBrowser-Info.plist */ = {isa = PBXFileReference; path = "CodeBrowser-Info.plist"; sourceTree = "<group>"; };
+		2AC438D315B6970D00233CBC /* CodeBrowser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CodeBrowser-Info.plist"; sourceTree = "<group>"; };
 		2AC438D515B6970D00233CBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2AC438D715B6970D00233CBC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2AC438D915B6970D00233CBC /* CodeBrowser-Prefix.pch */ = {isa = PBXFileReference; path = "CodeBrowser-Prefix.pch"; sourceTree = "<group>"; };
-		2AC438DA15B6970D00233CBC /* xzAppDelegate.h */ = {isa = PBXFileReference; path = xzAppDelegate.h; sourceTree = "<group>"; };
+		2AC438D915B6970D00233CBC /* CodeBrowser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CodeBrowser-Prefix.pch"; sourceTree = "<group>"; };
+		2AC438DA15B6970D00233CBC /* xzAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xzAppDelegate.h; sourceTree = "<group>"; };
 		2AC438DB15B6970D00233CBC /* xzAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xzAppDelegate.m; sourceTree = "<group>"; };
-		2AC438DD15B6970D00233CBC /* xzViewController.h */ = {isa = PBXFileReference; path = xzViewController.h; sourceTree = "<group>"; };
+		2AC438DD15B6970D00233CBC /* xzViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xzViewController.h; sourceTree = "<group>"; };
 		2AC438DE15B6970D00233CBC /* xzViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xzViewController.m; sourceTree = "<group>"; };
 		2AC438E115B6970D00233CBC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/xzViewController.xib; sourceTree = "<group>"; };
 		2AC438E815B6970D00233CBC /* CodeBrowserTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeBrowserTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC438E915B6970D00233CBC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		2AC438F115B6970D00233CBC /* CodeBrowserTests-Info.plist */ = {isa = PBXFileReference; path = "CodeBrowserTests-Info.plist"; sourceTree = "<group>"; };
+		2AC438F115B6970D00233CBC /* CodeBrowserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CodeBrowserTests-Info.plist"; sourceTree = "<group>"; };
 		2AC438F315B6970D00233CBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2AC438F515B6970D00233CBC /* CodeBrowserTests.h */ = {isa = PBXFileReference; path = CodeBrowserTests.h; sourceTree = "<group>"; };
+		2AC438F515B6970D00233CBC /* CodeBrowserTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeBrowserTests.h; sourceTree = "<group>"; };
 		2AC438F615B6970D00233CBC /* CodeBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeBrowserTests.m; sourceTree = "<group>"; };
+		2AC4390115B6974300233CBC /* xzMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xzMenuViewController.h; sourceTree = "<group>"; };
+		2AC4390215B6974300233CBC /* xzMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xzMenuViewController.m; sourceTree = "<group>"; };
+		2AD33AF415B6A5FF0027D30F /* xzMenuHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xzMenuHelper.h; sourceTree = "<group>"; };
+		2AD33AF515B6A5FF0027D30F /* xzMenuHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xzMenuHelper.m; sourceTree = "<group>"; };
+		2AD33AF915B7A4F90027D30F /* xzMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xzMenuItemView.h; sourceTree = "<group>"; };
+		2AD33AFA15B7A4F90027D30F /* xzMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xzMenuItemView.m; sourceTree = "<group>"; };
+		2AD33B0315B7AD220027D30F /* xzMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xzMenuCell.h; sourceTree = "<group>"; };
+		2AD33B0415B7AD220027D30F /* xzMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xzMenuCell.m; sourceTree = "<group>"; };
+		2AD33B0A15B7B2810027D30F /* dictionaryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dictionaryIcon.png; sourceTree = "<group>"; };
+		2AD33B0B15B7B2810027D30F /* fileIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fileIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +97,7 @@
 		2AC438BC15B6970D00233CBC = {
 			isa = PBXGroup;
 			children = (
+				2AC4390015B6972F00233CBC /* Menu */,
 				2AC438D115B6970D00233CBC /* CodeBrowser */,
 				2AC438EF15B6970D00233CBC /* CodeBrowserTests */,
 				2AC438CA15B6970D00233CBC /* Frameworks */,
@@ -149,6 +166,31 @@
 				2AC438F215B6970D00233CBC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2AC4390015B6972F00233CBC /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				2AD33AFC15B7A7BA0027D30F /* MenuImage */,
+				2AC4390115B6974300233CBC /* xzMenuViewController.h */,
+				2AC4390215B6974300233CBC /* xzMenuViewController.m */,
+				2AD33B0315B7AD220027D30F /* xzMenuCell.h */,
+				2AD33B0415B7AD220027D30F /* xzMenuCell.m */,
+				2AD33AF915B7A4F90027D30F /* xzMenuItemView.h */,
+				2AD33AFA15B7A4F90027D30F /* xzMenuItemView.m */,
+				2AD33AF415B6A5FF0027D30F /* xzMenuHelper.h */,
+				2AD33AF515B6A5FF0027D30F /* xzMenuHelper.m */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		2AD33AFC15B7A7BA0027D30F /* MenuImage */ = {
+			isa = PBXGroup;
+			children = (
+				2AD33B0A15B7B2810027D30F /* dictionaryIcon.png */,
+				2AD33B0B15B7B2810027D30F /* fileIcon.png */,
+			);
+			name = MenuImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +266,8 @@
 			files = (
 				2AC438D615B6970D00233CBC /* InfoPlist.strings in Resources */,
 				2AC438E215B6970D00233CBC /* xzViewController.xib in Resources */,
+				2AD33B0C15B7B2810027D30F /* dictionaryIcon.png in Resources */,
+				2AD33B0D15B7B2810027D30F /* fileIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +305,10 @@
 				2AC438D815B6970D00233CBC /* main.m in Sources */,
 				2AC438DC15B6970D00233CBC /* xzAppDelegate.m in Sources */,
 				2AC438DF15B6970D00233CBC /* xzViewController.m in Sources */,
+				2AC4390315B6974300233CBC /* xzMenuViewController.m in Sources */,
+				2AD33AF615B6A5FF0027D30F /* xzMenuHelper.m in Sources */,
+				2AD33AFB15B7A4F90027D30F /* xzMenuItemView.m in Sources */,
+				2AD33B0515B7AD220027D30F /* xzMenuCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +480,7 @@
 				2AC438FC15B6970D00233CBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AC438FD15B6970D00233CBC /* Build configuration list for PBXNativeTarget "CodeBrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +489,7 @@
 				2AC438FF15B6970D00233CBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
