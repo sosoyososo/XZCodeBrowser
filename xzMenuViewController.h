@@ -11,5 +11,6 @@
 @interface xzMenuViewController : UITableViewController
 
 - (id)initWithRootPath:(NSString *)path;
+- (void)reloadFileList;
 
 @end

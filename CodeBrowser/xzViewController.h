@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface xzViewController : UIViewController
+#import "xzNetController.h"
+
+@interface xzViewController : UIViewController <FileTanslationDelegate>
 
 @end

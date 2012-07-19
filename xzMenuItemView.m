@@ -19,6 +19,13 @@
 
 @synthesize content, isDictionary, contentLabel, iconView;
 
+- (void)dealloc {
+    [super dealloc];
+    [content release];
+    [contentLabel release];
+    [iconView  release];
+}
+
 - (UIView *)initWithContent:(NSString *)acontent isDictionary:(BOOL)is {
     if(self = [super initWithFrame:CGRectMake(0, 0, 500, 30)]) {
         [self setContent:acontent];

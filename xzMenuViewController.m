@@ -22,6 +22,17 @@
 
 @synthesize rootPath, contentArray, menuHelper;
 
+- (void)reloadFileList {
+    [self.menuHelper reloadFileList];
+    [self.tableView reloadData];
+}
+
+- (void)dealloc {
+    [super dealloc];
+    [rootPath release];
+    [contentArray release];
+}
+
 - (id)initWithRootPath:(NSString *)path {
     
     if([super init]) {
@@ -48,7 +59,7 @@
     static NSString *CellIdentifier = @"Cell";
     xzMenuCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if(!cell) {
-        cell = [[xzMenuCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[[xzMenuCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     

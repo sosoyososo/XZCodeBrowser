@@ -25,6 +25,14 @@
 
 @synthesize rootPath, contentArray, fileManager, unfoldedPath;
 
+- (void)dealloc {
+    [super dealloc];
+    [rootPath release];
+    [contentArray release];
+    [fileManager release];
+    [unfoldedPath release];
+}
+
 - (id)initWithRootPath:(NSString *)path {
 
     if(self = [super init]) {
@@ -137,6 +145,11 @@
     
     NSArray *contents = [self.fileManager contentsOfDirectoryAtPath:parentPath error:nil];
     [self.contentArray removeObjectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(index+1, contents.count)]];
+}
+
+- (void)reloadFileList {
+    [self.contentArray removeAllObjects];
+    [self unFoldRoot];
 }
 
 ////////////////////////////////////////////////////////////////////////////////

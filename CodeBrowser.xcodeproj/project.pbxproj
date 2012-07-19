@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A79BB5515B7F52E0096AFB7 /* xzNetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A79BB5315B7F52E0096AFB7 /* xzNetController.m */; };
+		2A79BB5815B801630096AFB7 /* ftp_commands.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A79BB5715B801630096AFB7 /* ftp_commands.plist */; };
 		2AC438CC15B6970D00233CBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC438CB15B6970D00233CBC /* UIKit.framework */; };
 		2AC438CE15B6970D00233CBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC438CD15B6970D00233CBC /* Foundation.framework */; };
 		2AC438D015B6970D00233CBC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC438CF15B6970D00233CBC /* CoreGraphics.framework */; };
@@ -26,6 +28,14 @@
 		2AD33B0515B7AD220027D30F /* xzMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD33B0415B7AD220027D30F /* xzMenuCell.m */; };
 		2AD33B0C15B7B2810027D30F /* dictionaryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD33B0A15B7B2810027D30F /* dictionaryIcon.png */; };
 		2AD33B0D15B7B2810027D30F /* fileIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD33B0B15B7B2810027D30F /* fileIcon.png */; };
+		2AF0621F15B7D6EA00B3C015 /* FtpConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0621915B7D6EA00B3C015 /* FtpConnection.m */; };
+		2AF0622015B7D6EA00B3C015 /* FtpDataConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0621B15B7D6EA00B3C015 /* FtpDataConnection.m */; };
+		2AF0622115B7D6EA00B3C015 /* FtpServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0621E15B7D6EA00B3C015 /* FtpServer.m */; };
+		2AF0622615B7D6F700B3C015 /* list.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0622315B7D6F700B3C015 /* list.m */; };
+		2AF0622715B7D6F700B3C015 /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0622515B7D6F700B3C015 /* NetworkController.m */; };
+		2AF0622A15B7D90B00B3C015 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0622915B7D90B00B3C015 /* AsyncSocket.m */; };
+		2AF0622C15B7D96F00B3C015 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF0622B15B7D96F00B3C015 /* CFNetwork.framework */; };
+		2AF0622E15B7D9C600B3C015 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF0622D15B7D9C600B3C015 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A79BB5215B7F52E0096AFB7 /* xzNetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xzNetController.h; sourceTree = "<group>"; };
+		2A79BB5315B7F52E0096AFB7 /* xzNetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xzNetController.m; sourceTree = "<group>"; };
+		2A79BB5715B801630096AFB7 /* ftp_commands.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ftp_commands.plist; sourceTree = "<group>"; };
 		2AC438C715B6970D00233CBC /* CodeBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC438CB15B6970D00233CBC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2AC438CD15B6970D00233CBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,6 +81,21 @@
 		2AD33B0415B7AD220027D30F /* xzMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xzMenuCell.m; sourceTree = "<group>"; };
 		2AD33B0A15B7B2810027D30F /* dictionaryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dictionaryIcon.png; sourceTree = "<group>"; };
 		2AD33B0B15B7B2810027D30F /* fileIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fileIcon.png; sourceTree = "<group>"; };
+		2AF0621815B7D6EA00B3C015 /* FtpConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FtpConnection.h; sourceTree = "<group>"; };
+		2AF0621915B7D6EA00B3C015 /* FtpConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FtpConnection.m; sourceTree = "<group>"; };
+		2AF0621A15B7D6EA00B3C015 /* FtpDataConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FtpDataConnection.h; sourceTree = "<group>"; };
+		2AF0621B15B7D6EA00B3C015 /* FtpDataConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FtpDataConnection.m; sourceTree = "<group>"; };
+		2AF0621C15B7D6EA00B3C015 /* FtpDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FtpDefines.h; sourceTree = "<group>"; };
+		2AF0621D15B7D6EA00B3C015 /* FtpServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FtpServer.h; sourceTree = "<group>"; };
+		2AF0621E15B7D6EA00B3C015 /* FtpServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FtpServer.m; sourceTree = "<group>"; };
+		2AF0622215B7D6F700B3C015 /* list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
+		2AF0622315B7D6F700B3C015 /* list.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = list.m; sourceTree = "<group>"; };
+		2AF0622415B7D6F700B3C015 /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkController.h; sourceTree = "<group>"; };
+		2AF0622515B7D6F700B3C015 /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
+		2AF0622815B7D90B00B3C015 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		2AF0622915B7D90B00B3C015 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		2AF0622B15B7D96F00B3C015 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2AF0622D15B7D9C600B3C015 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AF0622E15B7D9C600B3C015 /* SystemConfiguration.framework in Frameworks */,
+				2AF0622C15B7D96F00B3C015 /* CFNetwork.framework in Frameworks */,
 				2AC438CC15B6970D00233CBC /* UIKit.framework in Frameworks */,
 				2AC438CE15B6970D00233CBC /* Foundation.framework in Frameworks */,
 				2AC438D015B6970D00233CBC /* CoreGraphics.framework in Frameworks */,
@@ -97,6 +127,7 @@
 		2AC438BC15B6970D00233CBC = {
 			isa = PBXGroup;
 			children = (
+				2AF0622F15B7EFD200B3C015 /* NetWork */,
 				2AC4390015B6972F00233CBC /* Menu */,
 				2AC438D115B6970D00233CBC /* CodeBrowser */,
 				2AC438EF15B6970D00233CBC /* CodeBrowserTests */,
@@ -117,6 +148,8 @@
 		2AC438CA15B6970D00233CBC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2AF0622D15B7D9C600B3C015 /* SystemConfiguration.framework */,
+				2AF0622B15B7D96F00B3C015 /* CFNetwork.framework */,
 				2AC438CB15B6970D00233CBC /* UIKit.framework */,
 				2AC438CD15B6970D00233CBC /* Foundation.framework */,
 				2AC438CF15B6970D00233CBC /* CoreGraphics.framework */,
@@ -191,6 +224,37 @@
 				2AD33B0B15B7B2810027D30F /* fileIcon.png */,
 			);
 			name = MenuImage;
+			sourceTree = "<group>";
+		};
+		2AF0621315B7D6A300B3C015 /* FTPServer */ = {
+			isa = PBXGroup;
+			children = (
+				2A79BB5715B801630096AFB7 /* ftp_commands.plist */,
+				2AF0622815B7D90B00B3C015 /* AsyncSocket.h */,
+				2AF0622915B7D90B00B3C015 /* AsyncSocket.m */,
+				2AF0622215B7D6F700B3C015 /* list.h */,
+				2AF0622315B7D6F700B3C015 /* list.m */,
+				2AF0622415B7D6F700B3C015 /* NetworkController.h */,
+				2AF0622515B7D6F700B3C015 /* NetworkController.m */,
+				2AF0621815B7D6EA00B3C015 /* FtpConnection.h */,
+				2AF0621915B7D6EA00B3C015 /* FtpConnection.m */,
+				2AF0621A15B7D6EA00B3C015 /* FtpDataConnection.h */,
+				2AF0621B15B7D6EA00B3C015 /* FtpDataConnection.m */,
+				2AF0621C15B7D6EA00B3C015 /* FtpDefines.h */,
+				2AF0621D15B7D6EA00B3C015 /* FtpServer.h */,
+				2AF0621E15B7D6EA00B3C015 /* FtpServer.m */,
+			);
+			name = FTPServer;
+			sourceTree = "<group>";
+		};
+		2AF0622F15B7EFD200B3C015 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				2AF0621315B7D6A300B3C015 /* FTPServer */,
+				2A79BB5215B7F52E0096AFB7 /* xzNetController.h */,
+				2A79BB5315B7F52E0096AFB7 /* xzNetController.m */,
+			);
+			name = NetWork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +332,7 @@
 				2AC438E215B6970D00233CBC /* xzViewController.xib in Resources */,
 				2AD33B0C15B7B2810027D30F /* dictionaryIcon.png in Resources */,
 				2AD33B0D15B7B2810027D30F /* fileIcon.png in Resources */,
+				2A79BB5815B801630096AFB7 /* ftp_commands.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +374,13 @@
 				2AD33AF615B6A5FF0027D30F /* xzMenuHelper.m in Sources */,
 				2AD33AFB15B7A4F90027D30F /* xzMenuItemView.m in Sources */,
 				2AD33B0515B7AD220027D30F /* xzMenuCell.m in Sources */,
+				2AF0621F15B7D6EA00B3C015 /* FtpConnection.m in Sources */,
+				2AF0622015B7D6EA00B3C015 /* FtpDataConnection.m in Sources */,
+				2AF0622115B7D6EA00B3C015 /* FtpServer.m in Sources */,
+				2AF0622615B7D6F700B3C015 /* list.m in Sources */,
+				2AF0622715B7D6F700B3C015 /* NetworkController.m in Sources */,
+				2AF0622A15B7D90B00B3C015 /* AsyncSocket.m in Sources */,
+				2A79BB5515B7F52E0096AFB7 /* xzNetController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,9 +481,11 @@
 		2AC438FB15B6970D00233CBC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CodeBrowser/CodeBrowser-Prefix.pch";
 				INFOPLIST_FILE = "CodeBrowser/CodeBrowser-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -420,9 +494,11 @@
 		2AC438FC15B6970D00233CBC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CodeBrowser/CodeBrowser-Prefix.pch";
 				INFOPLIST_FILE = "CodeBrowser/CodeBrowser-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

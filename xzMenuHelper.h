@@ -20,5 +20,6 @@
 
 - (void)unFoldDictionaryAtIndex:(NSUInteger)index;
 - (void)foldDictionaryAtIndex:(NSUInteger)index;
+- (void)reloadFileList;
 
 @end

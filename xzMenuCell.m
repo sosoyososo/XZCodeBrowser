@@ -22,6 +22,11 @@
 
 @synthesize itemView, level, content, isDictionary;
 
+- (void)dealloc {
+    [super dealloc];
+    [itemView release];
+}
+
 - (xzMenuItemView *)itemView {
     if(!itemView) {
         itemView = [[xzMenuItemView alloc] initWithContent:nil isDictionary:NO];
