@@ -84,8 +84,8 @@
 		2AD17B8A15B928E4002F429E /* codemirror.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = codemirror.css; sourceTree = "<group>"; };
 		2AD17B8B15B928E4002F429E /* codemirror.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = codemirror.js; sourceTree = "<group>"; };
 		2AD17B8F15B928E9002F429E /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		2AD17B9115B92915002F429E /* xzCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xzCodeView.h; path = ../xzCodeView.h; sourceTree = "<group>"; };
-		2AD17B9215B92915002F429E /* xzCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = xzCodeView.m; path = ../xzCodeView.m; sourceTree = "<group>"; };
+		2AD17B9115B92915002F429E /* xzCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xzCodeView.h; sourceTree = "<group>"; };
+		2AD17B9215B92915002F429E /* xzCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xzCodeView.m; sourceTree = "<group>"; };
 		2AD33AF415B6A5FF0027D30F /* xzMenuHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xzMenuHelper.h; sourceTree = "<group>"; };
 		2AD33AF515B6A5FF0027D30F /* xzMenuHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xzMenuHelper.m; sourceTree = "<group>"; };
 		2AD33AF915B7A4F90027D30F /* xzMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xzMenuItemView.h; sourceTree = "<group>"; };
@@ -175,8 +175,6 @@
 		2AC438D115B6970D00233CBC /* CodeBrowser */ = {
 			isa = PBXGroup;
 			children = (
-				2AD17B9115B92915002F429E /* xzCodeView.h */,
-				2AD17B9215B92915002F429E /* xzCodeView.m */,
 				2AC438DA15B6970D00233CBC /* xzAppDelegate.h */,
 				2AC438DB15B6970D00233CBC /* xzAppDelegate.m */,
 				2AC438DD15B6970D00233CBC /* xzViewController.h */,
@@ -236,6 +234,8 @@
 		2AD17B8715B928C5002F429E /* CodeView */ = {
 			isa = PBXGroup;
 			children = (
+				2AD17B9115B92915002F429E /* xzCodeView.h */,
+				2AD17B9215B92915002F429E /* xzCodeView.m */,
 				2AD17B8F15B928E9002F429E /* index.html */,
 				2AD17B8915B928E4002F429E /* clike.js */,
 				2AD17B8A15B928E4002F429E /* codemirror.css */,
