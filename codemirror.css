@@ -1,7 +1,7 @@
-.CodeMirror {
-  line-height: 1em;
-  font-family: monospace;
-}
+//.CodeMirror {
+//  line-height: 1em;
+//  font-family: monospace;
+//}
 
 .CodeMirror-scroll {
   overflow: auto;

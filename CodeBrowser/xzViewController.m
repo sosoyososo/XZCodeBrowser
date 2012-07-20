@@ -57,6 +57,7 @@
     [UIView beginAnimations:@"showMenu" context:nil];
     CGRect rect = self.menuController.view.bounds;
     rect.origin.x = 0;
+    rect.origin.y = 0;
     self.menuController.view.frame = rect;
     [UIView commitAnimations];
     
@@ -67,6 +68,7 @@
     [UIView beginAnimations:@"showMenu" context:nil];
     CGRect rect = self.menuController.view.bounds;
     rect.origin.x = 20 - rect.size.width;
+    rect.origin.y = 0;
     self.menuController.view.frame = rect;
     [UIView commitAnimations];
     

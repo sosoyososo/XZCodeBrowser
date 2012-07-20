@@ -131,6 +131,12 @@
     return  [self isUnfoldedPath:[self pathOfCellAtIndex:index]];
 }
 
+
+- (void)reloadFileList {
+    [self.contentArray removeAllObjects];
+    [self unFoldRoot];
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
 #pragma mark menu operation folding
@@ -140,15 +146,21 @@
 }
 
 - (void)foldDictionary:(NSString *)parentPath atIndex:(NSUInteger)index {
+    if(![self isUnfoldedPath:parentPath]) {
+        return;
+    }
+
     [self.unfoldedPath removeObject:parentPath];
     
     NSArray *contents = [self.fileManager contentsOfDirectoryAtPath:parentPath error:nil];
+    for (NSString *subDic in contents) {
+        NSString *fullSubPath = [parentPath stringByAppendingPathComponent:subDic];
+        if([self isDictionary:fullSubPath] && [self isUnfoldedPath:fullSubPath]) {
+            
+            [self foldDictionary:fullSubPath atIndex:[self.contentArray indexOfObject:fullSubPath]];
+        }
+    }
     [self.contentArray removeObjectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(index+1, contents.count)]];
-}
-
-- (void)reloadFileList {
-    [self.contentArray removeAllObjects];
-    [self unFoldRoot];
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -172,6 +184,10 @@
 }
 
 - (void)unFoldDictionary:(NSString *)parentPath atIndex:(NSUInteger)index {
+    if([self isUnfoldedPath:parentPath]) {
+        return;
+    }
+    
     [self.unfoldedPath addObject:parentPath];
     NSArray *contents = [self.fileManager contentsOfDirectoryAtPath:parentPath error:nil];
     NSMutableArray *contentsToBeAdd = [NSMutableArray arrayWithCapacity:1];
