@@ -81,10 +81,6 @@
     return isDictionary;
 }
 
-- (NSString *)pathOfCellAtIndex:(NSUInteger)index {
-    return [self.contentArray objectAtIndex:index];
-}
-
 - (NSString *)contentTobeShowInPath:(NSString *)path {
     NSArray *components = [path componentsSeparatedByString:@"/"];
     return [components objectAtIndex:(components.count-1)];
@@ -111,6 +107,9 @@
     return self.contentArray.count;
 }
 
+- (NSString *)pathOfCellAtIndex:(NSUInteger)index {
+    return [self.contentArray objectAtIndex:index];
+}
 
 - (NSString *)pathToBeShowAtIndex:(NSUInteger)index {
     return [self contentTobeShowInPath:[self pathOfCellAtIndex:index]];

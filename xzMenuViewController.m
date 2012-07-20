@@ -20,7 +20,7 @@
 
 @implementation xzMenuViewController
 
-@synthesize rootPath, contentArray, menuHelper;
+@synthesize rootPath, contentArray, menuHelper, menuDelegate;
 
 - (void)reloadFileList {
     [self.menuHelper reloadFileList];
@@ -72,12 +72,18 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if(![self.menuHelper isPathAtIndexUnfolded:indexPath.row]) {
-        [self.menuHelper unFoldDictionaryAtIndex:indexPath.row];
+    if([self.menuHelper pathAtIndexIsDictionary:indexPath.row]) {
+        if(![self.menuHelper isPathAtIndexUnfolded:indexPath.row]) {
+            [self.menuHelper unFoldDictionaryAtIndex:indexPath.row];
+        } else {
+            [self.menuHelper foldDictionaryAtIndex:indexPath.row];
+        }
+        [tableView reloadData];
     } else {
-        [self.menuHelper foldDictionaryAtIndex:indexPath.row];
+        if([menuDelegate conformsToProtocol:@protocol(xzMenuDelegate)]) {
+            [menuDelegate didSelectedFileAtPath:[self.menuHelper pathOfCellAtIndex:indexPath.row]];
+        }
     }
-    [tableView reloadData];
 }
 
 @end

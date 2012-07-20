@@ -12,6 +12,7 @@
 
 - (id)initWithRootPath:(NSString *)path;
 - (NSUInteger)numOfMenuCell;
+- (NSString *)pathOfCellAtIndex:(NSUInteger)index;
 - (NSString *)pathToBeShowAtIndex:(NSUInteger)index;
 - (BOOL)pathAtIndexIsDictionary:(NSInteger)index;
 - (NSUInteger)levelOfPathAtIndex:(NSUInteger)index;

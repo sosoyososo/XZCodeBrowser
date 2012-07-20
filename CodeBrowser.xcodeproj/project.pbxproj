@@ -23,6 +23,13 @@
 		2AC438F415B6970D00233CBC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AC438F215B6970D00233CBC /* InfoPlist.strings */; };
 		2AC438F715B6970D00233CBC /* CodeBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC438F615B6970D00233CBC /* CodeBrowserTests.m */; };
 		2AC4390315B6974300233CBC /* xzMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC4390215B6974300233CBC /* xzMenuViewController.m */; };
+		2AD17B8C15B928E4002F429E /* clike.js in Sources */ = {isa = PBXBuildFile; fileRef = 2AD17B8915B928E4002F429E /* clike.js */; };
+		2AD17B8D15B928E4002F429E /* codemirror.css in Resources */ = {isa = PBXBuildFile; fileRef = 2AD17B8A15B928E4002F429E /* codemirror.css */; };
+		2AD17B8E15B928E4002F429E /* codemirror.js in Sources */ = {isa = PBXBuildFile; fileRef = 2AD17B8B15B928E4002F429E /* codemirror.js */; };
+		2AD17B9015B928E9002F429E /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 2AD17B8F15B928E9002F429E /* index.html */; };
+		2AD17B9315B92915002F429E /* xzCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD17B9215B92915002F429E /* xzCodeView.m */; };
+		2AD17B9415B92C46002F429E /* clike.js in Resources */ = {isa = PBXBuildFile; fileRef = 2AD17B8915B928E4002F429E /* clike.js */; };
+		2AD17B9515B92C46002F429E /* codemirror.js in Resources */ = {isa = PBXBuildFile; fileRef = 2AD17B8B15B928E4002F429E /* codemirror.js */; };
 		2AD33AF615B6A5FF0027D30F /* xzMenuHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD33AF515B6A5FF0027D30F /* xzMenuHelper.m */; };
 		2AD33AFB15B7A4F90027D30F /* xzMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD33AFA15B7A4F90027D30F /* xzMenuItemView.m */; };
 		2AD33B0515B7AD220027D30F /* xzMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD33B0415B7AD220027D30F /* xzMenuCell.m */; };
@@ -73,6 +80,12 @@
 		2AC438F615B6970D00233CBC /* CodeBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeBrowserTests.m; sourceTree = "<group>"; };
 		2AC4390115B6974300233CBC /* xzMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xzMenuViewController.h; sourceTree = "<group>"; };
 		2AC4390215B6974300233CBC /* xzMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xzMenuViewController.m; sourceTree = "<group>"; };
+		2AD17B8915B928E4002F429E /* clike.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = clike.js; sourceTree = "<group>"; };
+		2AD17B8A15B928E4002F429E /* codemirror.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = codemirror.css; sourceTree = "<group>"; };
+		2AD17B8B15B928E4002F429E /* codemirror.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = codemirror.js; sourceTree = "<group>"; };
+		2AD17B8F15B928E9002F429E /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		2AD17B9115B92915002F429E /* xzCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xzCodeView.h; path = ../xzCodeView.h; sourceTree = "<group>"; };
+		2AD17B9215B92915002F429E /* xzCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = xzCodeView.m; path = ../xzCodeView.m; sourceTree = "<group>"; };
 		2AD33AF415B6A5FF0027D30F /* xzMenuHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xzMenuHelper.h; sourceTree = "<group>"; };
 		2AD33AF515B6A5FF0027D30F /* xzMenuHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xzMenuHelper.m; sourceTree = "<group>"; };
 		2AD33AF915B7A4F90027D30F /* xzMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xzMenuItemView.h; sourceTree = "<group>"; };
@@ -127,6 +140,7 @@
 		2AC438BC15B6970D00233CBC = {
 			isa = PBXGroup;
 			children = (
+				2AD17B8715B928C5002F429E /* CodeView */,
 				2AF0622F15B7EFD200B3C015 /* NetWork */,
 				2AC4390015B6972F00233CBC /* Menu */,
 				2AC438D115B6970D00233CBC /* CodeBrowser */,
@@ -161,6 +175,8 @@
 		2AC438D115B6970D00233CBC /* CodeBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				2AD17B9115B92915002F429E /* xzCodeView.h */,
+				2AD17B9215B92915002F429E /* xzCodeView.m */,
 				2AC438DA15B6970D00233CBC /* xzAppDelegate.h */,
 				2AC438DB15B6970D00233CBC /* xzAppDelegate.m */,
 				2AC438DD15B6970D00233CBC /* xzViewController.h */,
@@ -215,6 +231,17 @@
 				2AD33AF515B6A5FF0027D30F /* xzMenuHelper.m */,
 			);
 			name = Menu;
+			sourceTree = "<group>";
+		};
+		2AD17B8715B928C5002F429E /* CodeView */ = {
+			isa = PBXGroup;
+			children = (
+				2AD17B8F15B928E9002F429E /* index.html */,
+				2AD17B8915B928E4002F429E /* clike.js */,
+				2AD17B8A15B928E4002F429E /* codemirror.css */,
+				2AD17B8B15B928E4002F429E /* codemirror.js */,
+			);
+			name = CodeView;
 			sourceTree = "<group>";
 		};
 		2AD33AFC15B7A7BA0027D30F /* MenuImage */ = {
@@ -328,11 +355,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AD17B9415B92C46002F429E /* clike.js in Resources */,
+				2AD17B9515B92C46002F429E /* codemirror.js in Resources */,
 				2AC438D615B6970D00233CBC /* InfoPlist.strings in Resources */,
 				2AC438E215B6970D00233CBC /* xzViewController.xib in Resources */,
 				2AD33B0C15B7B2810027D30F /* dictionaryIcon.png in Resources */,
 				2AD33B0D15B7B2810027D30F /* fileIcon.png in Resources */,
 				2A79BB5815B801630096AFB7 /* ftp_commands.plist in Resources */,
+				2AD17B8D15B928E4002F429E /* codemirror.css in Resources */,
+				2AD17B9015B928E9002F429E /* index.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +412,9 @@
 				2AF0622715B7D6F700B3C015 /* NetworkController.m in Sources */,
 				2AF0622A15B7D90B00B3C015 /* AsyncSocket.m in Sources */,
 				2A79BB5515B7F52E0096AFB7 /* xzNetController.m in Sources */,
+				2AD17B8C15B928E4002F429E /* clike.js in Sources */,
+				2AD17B8E15B928E4002F429E /* codemirror.js in Sources */,
+				2AD17B9315B92915002F429E /* xzCodeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

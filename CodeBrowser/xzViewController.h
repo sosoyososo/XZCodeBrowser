@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "xzNetController.h"
-
-@interface xzViewController : UIViewController <FileTanslationDelegate>
+#import "xzMenuViewController.h"
+@interface xzViewController : UIViewController <FileTanslationDelegate, xzMenuDelegate>
 
 @end

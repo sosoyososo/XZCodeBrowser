@@ -8,7 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface xzMenuViewController : UITableViewController
+@protocol xzMenuDelegate <NSObject>
+
+@required
+- (void)didSelectedFileAtPath:(NSString *)path;
+
+@end
+
+@interface xzMenuViewController : UITableViewController 
+
+@property (assign) id<xzMenuDelegate>  menuDelegate;
+
 
 - (id)initWithRootPath:(NSString *)path;
 - (void)reloadFileList;

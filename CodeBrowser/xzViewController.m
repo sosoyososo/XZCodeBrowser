@@ -11,26 +11,33 @@
 #import "FtpServer.h"
 #import "NetworkController.h"
 #import "xzNetController.h"
+#import "xzCodeView.h"
 
 @interface  xzViewController()
 
 @property (nonatomic, readonly) xzMenuViewController            *menuController;
 @property (nonatomic, readonly) xzNetController                 *netController;
+@property (nonatomic, readonly) xzCodeView                      *codeView;
 
 @end
 
 @implementation xzViewController
 
-@synthesize menuController, netController;
+@synthesize menuController, netController, codeView;
 
 - (void)dealloc {
     [super dealloc];
+    netController.fileTansFinishDelegate = nil;
+    menuController.menuDelegate = nil;
     [menuController release];
     [netController release];
+    [codeView release];
 }
 
 - (void)loadView {
     [super loadView];
+    
+    [self.view addSubview:self.codeView];
     
     [self addChildViewController:self.menuController];
     [self.view addSubview:self.menuController.view];
@@ -110,6 +117,7 @@
     if(!menuController) {
         NSString *path = [NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES ) objectAtIndex:0];
         menuController = [[xzMenuViewController alloc] initWithRootPath:path];
+        menuController.menuDelegate = self;
         menuController.view.backgroundColor = [UIColor grayColor];
         CGRect rect = self.view.bounds;
         rect.size.width /= 2;
@@ -132,8 +140,21 @@
     return menuController;
 }
 
+
+- (xzCodeView *)codeView {
+    if(!codeView) {
+        codeView = [[xzCodeView alloc] initWithFrame:self.view.bounds];
+    }
+    return codeView;
+}
+
 - (void)fileTranslateFinished {
     [self.menuController reloadFileList];
+}
+
+- (void)didSelectedFileAtPath:(NSString *)path {
+    self.codeView.filePath = path;
+    [self.codeView reloadData];
 }
 
 
