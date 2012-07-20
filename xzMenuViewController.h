@@ -22,5 +22,6 @@
 
 - (id)initWithRootPath:(NSString *)path;
 - (void)reloadFileList;
+- (void)setShow:(BOOL)isShow;
 
 @end

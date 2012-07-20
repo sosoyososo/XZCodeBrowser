@@ -59,6 +59,8 @@
     rect.origin.x = 0;
     self.menuController.view.frame = rect;
     [UIView commitAnimations];
+    
+    [self.menuController setShow:YES];
 }
 
 - (void)hideMenu:(UISwipeGestureRecognizer *)sender {
@@ -67,6 +69,8 @@
     rect.origin.x = 20 - rect.size.width;
     self.menuController.view.frame = rect;
     [UIView commitAnimations];
+    
+    [self.menuController setShow:NO];
 }
 
 - (void)showNetWork:(UISwipeGestureRecognizer *)sender {

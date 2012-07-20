@@ -27,6 +27,10 @@
     [self.tableView reloadData];
 }
 
+- (void)setShow:(BOOL)isShow {
+    self.tableView.allowsSelection = isShow;
+}
+
 - (void)dealloc {
     [super dealloc];
     [rootPath release];
