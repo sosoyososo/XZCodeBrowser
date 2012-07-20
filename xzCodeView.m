@@ -61,8 +61,8 @@
     NSError *error = nil;
     NSString *fileContent = [NSString stringWithContentsOfFile:path usedEncoding:&encoding error:&error];
     NSLog(@"%@", fileContent);
-    NSArray *array = [[NSArray alloc] initWithObjects:@"\n", @"\t", @"\r", nil];
-    NSArray *array1 = [[NSArray alloc] initWithObjects:@"\\n", @"\\t", @"\\r", nil];
+    NSArray *array = [[NSArray alloc] initWithObjects:@"\n", @"\t", @"\r", @"\v", @"\"", @"\'", nil];
+    NSArray *array1 = [[NSArray alloc] initWithObjects:@"\\n", @"\\t", @"\\r",@"\\v",@"\\\"", @"\\\'", nil];
     for (NSString *sub in array) {
         NSString *tobe = [array1 objectAtIndex:[array indexOfObject:sub]];
         fileContent = [fileContent stringByReplacingOccurrencesOfString:sub withString:tobe];
