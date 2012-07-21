@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2A79BB5515B7F52E0096AFB7 /* xzNetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A79BB5315B7F52E0096AFB7 /* xzNetController.m */; };
 		2A79BB5815B801630096AFB7 /* ftp_commands.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A79BB5715B801630096AFB7 /* ftp_commands.plist */; };
+		2A8609AE15B96EBE0061242C /* xzAdCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8609AD15B96EBE0061242C /* xzAdCodeView.m */; };
+		2A8609B115B96F0F0061242C /* xzFileAnalyser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8609B015B96F0F0061242C /* xzFileAnalyser.m */; };
+		2A8609C115BA514D0061242C /* keyWordForLanguage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A8609C015BA514D0061242C /* keyWordForLanguage.plist */; };
 		2AC438CC15B6970D00233CBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC438CB15B6970D00233CBC /* UIKit.framework */; };
 		2AC438CE15B6970D00233CBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC438CD15B6970D00233CBC /* Foundation.framework */; };
 		2AC438D015B6970D00233CBC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC438CF15B6970D00233CBC /* CoreGraphics.framework */; };
@@ -59,6 +62,11 @@
 		2A79BB5215B7F52E0096AFB7 /* xzNetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xzNetController.h; sourceTree = "<group>"; };
 		2A79BB5315B7F52E0096AFB7 /* xzNetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xzNetController.m; sourceTree = "<group>"; };
 		2A79BB5715B801630096AFB7 /* ftp_commands.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ftp_commands.plist; sourceTree = "<group>"; };
+		2A8609AC15B96EBE0061242C /* xzAdCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xzAdCodeView.h; sourceTree = "<group>"; };
+		2A8609AD15B96EBE0061242C /* xzAdCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xzAdCodeView.m; sourceTree = "<group>"; };
+		2A8609AF15B96F0F0061242C /* xzFileAnalyser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xzFileAnalyser.h; sourceTree = "<group>"; };
+		2A8609B015B96F0F0061242C /* xzFileAnalyser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xzFileAnalyser.m; sourceTree = "<group>"; };
+		2A8609C015BA514D0061242C /* keyWordForLanguage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keyWordForLanguage.plist; sourceTree = "<group>"; };
 		2AC438C715B6970D00233CBC /* CodeBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC438CB15B6970D00233CBC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2AC438CD15B6970D00233CBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -137,9 +145,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A8609BA15BA50DE0061242C /* fileAnalyser */ = {
+			isa = PBXGroup;
+			children = (
+				2A8609AF15B96F0F0061242C /* xzFileAnalyser.h */,
+				2A8609B015B96F0F0061242C /* xzFileAnalyser.m */,
+				2A8609C015BA514D0061242C /* keyWordForLanguage.plist */,
+			);
+			name = fileAnalyser;
+			sourceTree = "<group>";
+		};
 		2AC438BC15B6970D00233CBC = {
 			isa = PBXGroup;
 			children = (
+				2A8609BA15BA50DE0061242C /* fileAnalyser */,
 				2AD17B8715B928C5002F429E /* CodeView */,
 				2AF0622F15B7EFD200B3C015 /* NetWork */,
 				2AC4390015B6972F00233CBC /* Menu */,
@@ -234,6 +253,8 @@
 		2AD17B8715B928C5002F429E /* CodeView */ = {
 			isa = PBXGroup;
 			children = (
+				2A8609AC15B96EBE0061242C /* xzAdCodeView.h */,
+				2A8609AD15B96EBE0061242C /* xzAdCodeView.m */,
 				2AD17B9115B92915002F429E /* xzCodeView.h */,
 				2AD17B9215B92915002F429E /* xzCodeView.m */,
 				2AD17B8F15B928E9002F429E /* index.html */,
@@ -364,6 +385,7 @@
 				2A79BB5815B801630096AFB7 /* ftp_commands.plist in Resources */,
 				2AD17B8D15B928E4002F429E /* codemirror.css in Resources */,
 				2AD17B9015B928E9002F429E /* index.html in Resources */,
+				2A8609C115BA514D0061242C /* keyWordForLanguage.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +437,8 @@
 				2AD17B8C15B928E4002F429E /* clike.js in Sources */,
 				2AD17B8E15B928E4002F429E /* codemirror.js in Sources */,
 				2AD17B9315B92915002F429E /* xzCodeView.m in Sources */,
+				2A8609AE15B96EBE0061242C /* xzAdCodeView.m in Sources */,
+				2A8609B115B96F0F0061242C /* xzFileAnalyser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

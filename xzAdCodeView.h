@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface xzAdCodeView : UIView
+@interface xzAdCodeView : UITextView
 
 @end

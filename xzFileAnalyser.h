@@ -10,4 +10,10 @@
 
 @interface xzFileAnalyser : NSObject
 
+@property (nonatomic, readonly) NSArray     *classArray;
+@property (nonatomic, readonly) NSArray     *methodArray;
+@property (nonatomic, readonly) NSArray     *properteyArray;
+
++ (xzFileAnalyser *)fileAnalyserWithFile:(NSString *)path;
+
 @end
