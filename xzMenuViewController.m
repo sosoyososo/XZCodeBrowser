@@ -79,10 +79,21 @@
     if([self.menuHelper pathAtIndexIsDictionary:indexPath.row]) {
         if(![self.menuHelper isPathAtIndexUnfolded:indexPath.row]) {
             [self.menuHelper unFoldDictionaryAtIndex:indexPath.row];
+            NSMutableArray *indexpaths = [NSMutableArray arrayWithCapacity:1];
+            int count = [self.menuHelper numOfSubContentAtIndex:indexPath.row];
+            for (int i = 1; i <= count; ++ i) {
+                [indexpaths addObject:[NSIndexPath indexPathForRow:indexPath.row + i inSection:0]];
+            }
+            [tableView insertRowsAtIndexPaths:indexpaths withRowAnimation:UITableViewRowAnimationFade];
         } else {
             [self.menuHelper foldDictionaryAtIndex:indexPath.row];
+            NSMutableArray *indexpaths = [NSMutableArray arrayWithCapacity:1];
+            int count = [self.menuHelper numOfSubContentAtIndex:indexPath.row];
+            for (int i = 1; i <= count; ++ i) {
+                [indexpaths addObject:[NSIndexPath indexPathForRow:indexPath.row + i inSection:0]];
+            }
+            [tableView deleteRowsAtIndexPaths:indexpaths withRowAnimation:UITableViewRowAnimationFade];
         }
-        [tableView reloadData];
     } else {
         if([menuDelegate conformsToProtocol:@protocol(xzMenuDelegate)]) {
             [menuDelegate didSelectedFileAtPath:[self.menuHelper pathOfCellAtIndex:indexPath.row]];
