@@ -21,9 +21,9 @@
 
 - (void)dealloc {
     [super dealloc];
-    [content release];
-    [contentLabel release];
-    [iconView  release];
+    XZRelease(contentLabel)
+    XZRelease(content)
+    XZRelease(iconView)
 }
 
 - (UIView *)initWithContent:(NSString *)acontent isDictionary:(BOOL)is {

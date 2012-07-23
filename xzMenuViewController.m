@@ -74,21 +74,21 @@
     return cell;
 }
 
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if([self.menuHelper pathAtIndexIsDictionary:indexPath.row]) {
+        NSMutableArray *indexpaths = [NSMutableArray arrayWithCapacity:1];
+        
         if(![self.menuHelper isPathAtIndexUnfolded:indexPath.row]) {
-            [self.menuHelper unFoldDictionaryAtIndex:indexPath.row];
-            NSMutableArray *indexpaths = [NSMutableArray arrayWithCapacity:1];
             int count = [self.menuHelper numOfSubContentAtIndex:indexPath.row];
             for (int i = 1; i <= count; ++ i) {
                 [indexpaths addObject:[NSIndexPath indexPathForRow:indexPath.row + i inSection:0]];
             }
+            
+            [self.menuHelper unFoldDictionaryAtIndex:indexPath.row];
             [tableView insertRowsAtIndexPaths:indexpaths withRowAnimation:UITableViewRowAnimationFade];
         } else {
-            [self.menuHelper foldDictionaryAtIndex:indexPath.row];
-            NSMutableArray *indexpaths = [NSMutableArray arrayWithCapacity:1];
-            int count = [self.menuHelper numOfSubContentAtIndex:indexPath.row];
+            
+            int count = [self.menuHelper foldDictionaryAtIndex:indexPath.row];
             for (int i = 1; i <= count; ++ i) {
                 [indexpaths addObject:[NSIndexPath indexPathForRow:indexPath.row + i inSection:0]];
             }

@@ -20,7 +20,7 @@
 - (BOOL)isPathAtIndexUnfolded:(NSUInteger)index;
 
 - (void)unFoldDictionaryAtIndex:(NSUInteger)index;
-- (void)foldDictionaryAtIndex:(NSUInteger)index;
+- (NSInteger)foldDictionaryAtIndex:(NSUInteger)index;
 - (void)reloadFileList;
 
 @end

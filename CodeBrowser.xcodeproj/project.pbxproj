@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A2A673E15BAC09A00B36B3F /* xzMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD33AFA15B7A4F90027D30F /* xzMenuItemView.m */; };
 		2A79BB5515B7F52E0096AFB7 /* xzNetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A79BB5315B7F52E0096AFB7 /* xzNetController.m */; };
 		2A79BB5815B801630096AFB7 /* ftp_commands.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A79BB5715B801630096AFB7 /* ftp_commands.plist */; };
 		2A8609AE15B96EBE0061242C /* xzAdCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8609AD15B96EBE0061242C /* xzAdCodeView.m */; };
@@ -34,7 +35,6 @@
 		2AD17B9415B92C46002F429E /* clike.js in Resources */ = {isa = PBXBuildFile; fileRef = 2AD17B8915B928E4002F429E /* clike.js */; };
 		2AD17B9515B92C46002F429E /* codemirror.js in Resources */ = {isa = PBXBuildFile; fileRef = 2AD17B8B15B928E4002F429E /* codemirror.js */; };
 		2AD33AF615B6A5FF0027D30F /* xzMenuHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD33AF515B6A5FF0027D30F /* xzMenuHelper.m */; };
-		2AD33AFB15B7A4F90027D30F /* xzMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD33AFA15B7A4F90027D30F /* xzMenuItemView.m */; };
 		2AD33B0515B7AD220027D30F /* xzMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD33B0415B7AD220027D30F /* xzMenuCell.m */; };
 		2AD33B0C15B7B2810027D30F /* dictionaryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD33B0A15B7B2810027D30F /* dictionaryIcon.png */; };
 		2AD33B0D15B7B2810027D30F /* fileIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD33B0B15B7B2810027D30F /* fileIcon.png */; };
@@ -59,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A2A673D15BABFD200B36B3F /* Globale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globale.h; sourceTree = "<group>"; };
 		2A79BB5215B7F52E0096AFB7 /* xzNetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xzNetController.h; sourceTree = "<group>"; };
 		2A79BB5315B7F52E0096AFB7 /* xzNetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xzNetController.m; sourceTree = "<group>"; };
 		2A79BB5715B801630096AFB7 /* ftp_commands.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ftp_commands.plist; sourceTree = "<group>"; };
@@ -145,6 +146,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A2A673B15BABFA700B36B3F /* GlobalHelper */ = {
+			isa = PBXGroup;
+			children = (
+				2A2A673D15BABFD200B36B3F /* Globale.h */,
+			);
+			name = GlobalHelper;
+			sourceTree = "<group>";
+		};
 		2A8609BA15BA50DE0061242C /* fileAnalyser */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +167,7 @@
 		2AC438BC15B6970D00233CBC = {
 			isa = PBXGroup;
 			children = (
+				2A2A673B15BABFA700B36B3F /* GlobalHelper */,
 				2A8609BA15BA50DE0061242C /* fileAnalyser */,
 				2AD17B8715B928C5002F429E /* CodeView */,
 				2AF0622F15B7EFD200B3C015 /* NetWork */,
@@ -425,7 +435,6 @@
 				2AC438DF15B6970D00233CBC /* xzViewController.m in Sources */,
 				2AC4390315B6974300233CBC /* xzMenuViewController.m in Sources */,
 				2AD33AF615B6A5FF0027D30F /* xzMenuHelper.m in Sources */,
-				2AD33AFB15B7A4F90027D30F /* xzMenuItemView.m in Sources */,
 				2AD33B0515B7AD220027D30F /* xzMenuCell.m in Sources */,
 				2AF0621F15B7D6EA00B3C015 /* FtpConnection.m in Sources */,
 				2AF0622015B7D6EA00B3C015 /* FtpDataConnection.m in Sources */,
@@ -439,6 +448,7 @@
 				2AD17B9315B92915002F429E /* xzCodeView.m in Sources */,
 				2A8609AE15B96EBE0061242C /* xzAdCodeView.m in Sources */,
 				2A8609B115B96F0F0061242C /* xzFileAnalyser.m in Sources */,
+				2A2A673E15BAC09A00B36B3F /* xzMenuItemView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,11 +550,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CodeBrowser/CodeBrowser-Prefix.pch";
 				INFOPLIST_FILE = "CodeBrowser/CodeBrowser-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -553,11 +565,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CodeBrowser/CodeBrowser-Prefix.pch";
 				INFOPLIST_FILE = "CodeBrowser/CodeBrowser-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

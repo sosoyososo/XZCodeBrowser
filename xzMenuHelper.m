@@ -141,26 +141,29 @@
 #pragma mark -
 #pragma mark menu operation folding
 
-- (void)foldDictionaryAtIndex:(NSUInteger)index {
-    [self foldDictionary:[self pathOfCellAtIndex:index] atIndex:index];
+- (NSInteger)foldDictionaryAtIndex:(NSUInteger)index {
+    return [self foldDictionary:[self pathOfCellAtIndex:index] atIndex:index];
 }
 
-- (void)foldDictionary:(NSString *)parentPath atIndex:(NSUInteger)index {
+- (NSInteger)foldDictionary:(NSString *)parentPath atIndex:(NSUInteger)index {
     if(![self isUnfoldedPath:parentPath]) {
-        return;
+        return 0;
     }
 
     [self.unfoldedPath removeObject:parentPath];
     
+    NSInteger count = 0;
     NSArray *contents = [self.fileManager contentsOfDirectoryAtPath:parentPath error:nil];
     for (NSString *subDic in contents) {
         NSString *fullSubPath = [parentPath stringByAppendingPathComponent:subDic];
         if([self isDictionary:fullSubPath] && [self isUnfoldedPath:fullSubPath]) {
             
-            [self foldDictionary:fullSubPath atIndex:[self.contentArray indexOfObject:fullSubPath]];
+            count += [self foldDictionary:fullSubPath atIndex:[self.contentArray indexOfObject:fullSubPath]];
         }
     }
     [self.contentArray removeObjectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(index+1, contents.count)]];
+    count += contents.count;
+    return count;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
